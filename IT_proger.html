@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="Shortcut Icon" href="img/log.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My site</title>
+<link href="style_0.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>My biography</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">About me</a>
+      <a href="#" onclick="slowScroll('#overview')" title="hobby">My hobby</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="contacts">Feedback</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Ответы на вопросы">Link</a>
+       <li><a href="Page 1.html" target="_blank"><font size="4" color="gold">My family</font></a></li>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>My name is</h1>
+    <h3>Kazybek Sergazy!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>About me</h2>
+      <span>I was born on April 14, 2003 in the village of Makanchi, Urjar district, East Kazakhstan region.</span>
+    </div>
+    <div class="text">
+      <span><table border="1" width="600"><tr>
+      <th>Date</th>
+    <th>circumstances</th>
+    <th>achievements</th>
+   </tr>
+   <tr><td>2003</td><td>I was born</td><td></td>
+   <tr><td>2009</td><td>I went to school</td><td>I learned to write and the alphabet</td>
+   <tr><td>2019</td><td>I took part in the Physics Olympiad</td><td>I won 3rd place in the Republican competition of scientific projects in physics.</td>
+   <tr><td>2020</td><td>I finished school</td><td>I entered Astana IT University</td>
+  </table></span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>My hobbies:</h2>
+    <h4> playing football, volleyball, basketball, listening to music, reading history, playing computer games.</h4>
+
+    <div class="img">
+      <img src="https://avatars.mds.yandex.net/get-zen_doc/1856484/pub_5db1ba5dfbe6e700af4b3414_5db1ba7498fe7900b0660667/scale_1200" alt="">
+      <span>I have loved playing football since childhood. My favorite club is Borussia Dortmund</span>
+    </div>
+    <div class="img">
+      <img src="img/img7.png" alt="">
+      <span>I like listening to music. I especially love listening to Kazakh, Russian, Turkish and English songs. My favorite singer: Kuandyk Rahim</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Feedback</h5></center>
+    <form id="form_input">
+      <label for="name">Name <span>*</span></label><br>
+      <input type="text" placeholder="Enter your name" name="name" id="name"><br>
+      <label for="email">Email <span>*</span></label><br>
+			<input type="email" placeholder="Enter your email" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Please enter your message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <p style="size: 1px">links </p> 
+      <a style="position: relative;left: 45%" href="https://vk.com/id227753651" target="_blank">VK<img src="img/vkk.png" width="80px"></a>
+      <a style="position: relative;left: 45%" href="https://www.instagram.com/kazybek_100/" target="_blank">Instagram<img src="img/insta.png" width="80px"></a>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
